@@ -67,7 +67,41 @@ def search(item,numbers):
 
 
     
+#Contee's search 
 
+
+def  bsearch(item, list):
+
+    low = 0
+
+    up = len(list)-1
+     
+    
+#setting the range to manipulate list for search. 
+
+    while low <= up:
+        
+        
+        mid= (low + up) / 2 #setting the midpoint
+        
+        if list[mid] < item:
+
+            low = mid +1  #setting the new high midpoint
+
+        elif list[mid] > item:
+
+            up = mid - 1 #setting the new low midpoint
+
+        elif list[mid] == item:
+
+            
+            return mid #returning the item 
+
+        else:
+            return -1
+
+
+blist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 
 
 
