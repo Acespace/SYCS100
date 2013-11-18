@@ -54,9 +54,61 @@ def search(item,numbers):
 
 
 
+#ALston
+
+
+# Alston Clark
+
+def bsearch(list,search):
 
 
 
 
+  top = len(list)
+
+  bottom = 0
+
+  
+ 
+
+  if (top < search) and (search < bottom):
+    return -1 
+  
+  if (len(list) == 0):
+    return -1 
+    
+   
+  while ( bottom <= top):
+
+
+
+
+    mid = (top + bottom) / 2
+
+    if (search < list[mid]):
+      top = mid - 1
+
+
+    elif ( search > list[mid]):
+      bottom = mid + 1
+
+
+    
+
+    else:
+      return mid
+
+
+    
+
+
+
+
+mylist = [1,2,3,4,54,56,77,78,80]
+
+
+
+
+print bsearch(mylist,1)
 
 
