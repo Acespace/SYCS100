@@ -154,60 +154,36 @@ def bsearch (List, element): # defining the function
         else:
             return str(-1) + " Your element was not found in the list, sorry try again...."
 
-#Sarah Jones
-def bsearch( lista, element):
-    start = 0
-    end = len(lista) - 1
-    while (end >= start):
-          mid = (start + end) / 2
-          if (lista[mid] < element):
-            start = mid + 1
-          elif lista[mid] > element:
-            end = mid - 1
-          else:
-            return mid
-            
-        
-    return -1
+
+#Jabar Olatunji bsearch
+def bsearch(list,item):
     
-#Contee Cameron
-
-def  bsearch(ist, item):
-
-    low = 0
-
-    up = len(ist)-1
+      top =  len(list)-1
+      
+      bottom = 0
+      
+      found = False
+      
+      while found == False:
+          
+          search = (top+bottom)/2
+          
+          if item > list[search]:
+              
+             bottom = search + 1
+             
+        
+          elif item < list[search]:
+              
+              top = search -1
+          if item not in list:
+              return -1  
+            
+              
+          elif item == list[search]:
     
-
-    while low <= up:
-            
-        mid= (low + up) / 2
-        
-        
-        if ist[mid] < item:
-
-            low = mid +1
-            
-
-        elif ist[mid] > item:
-
-            up = mid - 1
-            
-
-        elif ist[mid] == item: 
-    
-            return mid
-        
-        elif len(ist) == 0:
-
-            return -1
-
-        else:
-            return -1
-
-
-
-
+              return search
+         
 
 
 
